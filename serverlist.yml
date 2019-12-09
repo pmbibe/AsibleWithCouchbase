@@ -15,12 +15,15 @@
     yum:
       name: couchbase-server
       state: latest
+#  - name: 'JoinCluster'
+#    uri:
+#      url: 'http://{{ ip_address }}:{{ port }}/node/controller/doJoinCluster'
+#      method: POST
+#      body: 'hostname={{ couchbase_server }}&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'
+#      body_format: json
+#      url_username: {{ username }}
+#      url_password: {{ password }}
+#    register: result
   - name: 'JoinCluster'
-    uri:
-      url: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
-      method: POST
-      body: 'hostname=192.168.141.203&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'
-      body_format: json
-      url_username: Administrator
-      url_password: Minhduc7b
-    register: result
+    shell: "curl -u {{ username }}:{{ password }} -v -X POST http://{{ ip_address }}:{{ port }}/node/controller/doJoinCluster -d 'hostname={{ couchbase_server }}&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'"
+    
