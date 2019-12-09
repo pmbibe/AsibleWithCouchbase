@@ -1,6 +1,6 @@
 [{
-  'hostname': '192.168.141.203',
-  'user': 'Administrator',
-  'password': 'Minhduc7b',
-  'services': 'kv,index,n1ql,fts'
+  "hostname": "192.168.141.203",
+  "user": "Administrator",
+  "password": "Minhduc7b",
+  "services": "kv,index,n1ql,fts"
 }]
