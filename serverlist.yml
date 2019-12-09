@@ -26,4 +26,3 @@
 #    register: result
   - name: 'JoinCluster'
     shell: "curl -u {{ username }}:{{ password }} -v -X POST http://{{ ip_address }}:{{ port }}/node/controller/doJoinCluster -d 'hostname={{ couchbase_server }}&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'"
-    
