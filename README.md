@@ -1,2 +1,2 @@
-# Ansible_Telegraf
-cd Ansible_Telegraf && ansible-playbook serverlist.yml
+# AnsibleWithCouchbase  
+cd AnsibleWithCouchbase && ansible-playbook serverlist.yml
