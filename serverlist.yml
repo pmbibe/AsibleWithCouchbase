@@ -26,3 +26,5 @@
 #    register: result
   - name: 'JoinCluster'
     shell: "curl -u {{ username }}:{{ password }} -v -X POST http://{{ ip_address }}:{{ port }}/node/controller/doJoinCluster -d 'hostname={{ couchbase_server }}&user={{ username }}&password={{ password }}&services=kv,index,n1ql,fts'"
+  - name: 'Rebalance'
+    shell: "curl -u {{ username }}:{{ password }} -v -X POST http://{{ ip_address }}:{{ port }}/controller/rebalance -d 'hostname={{ couchbase_server }}&user={{ username }}&password={{ password }}'"
