@@ -1,13 +1,18 @@
 ---
-- name: HelloWorld
+- name: Install Couchbase
   hosts: all
 
   tasks:
-  - name: "Change config telegraf"
-    loop: "{{ hostList }}"
-    when: " item.hostname == ansible_hostname "
-    template: src=telegraf.conf dest=/etc/telegraf/telegraf.conf
-  - name: Reload service telegraf, in all cases
-    service:
-      name: telegraf
-      state: reloaded
+  - name: "Check OpenSSL Dependency"
+    yum:
+      name: pkgconfig
+      state: lastest
+    - name: install the Couchbase rpm from a remote repo
+     yum:
+      name: http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-5-x86_64.rpm
+      state: present
+   - name: Installing using yum
+     yum:
+      name: couchbase-server
+      state: latest
+
