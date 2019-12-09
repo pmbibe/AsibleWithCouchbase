@@ -15,7 +15,7 @@
      yum:
       name: couchbase-server
       state: latest
-  -  name: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
+  -  name: 'JoinCluster'
      uri:
       url: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
       method: POST
