@@ -15,4 +15,14 @@
      yum:
       name: couchbase-server
       state: latest
+  -  name: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
+     uri:
+      url: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
+      method: POST
+      body: 'hostname=192.168.141.203&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'
+      body_format: json
+      url_username: Administrator
+      url_password: Minhduc7b
+     register: result
+
 
