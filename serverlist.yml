@@ -6,7 +6,7 @@
   - name: "Check OpenSSL Dependency"
     yum:
       name: pkgconfig
-      state: lastest
+      state: latest
   - name: install the Couchbase rpm from a remote repo
     yum:
       name: http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-5-x86_64.rpm
