@@ -7,22 +7,20 @@
     yum:
       name: pkgconfig
       state: lastest
-    - name: install the Couchbase rpm from a remote repo
-     yum:
+  - name: install the Couchbase rpm from a remote repo
+    yum:
       name: http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-5-x86_64.rpm
       state: present
-   - name: Installing using yum
-     yum:
+  - name: Installing using yum
+    yum:
       name: couchbase-server
       state: latest
-  -  name: 'JoinCluster'
-     uri:
+  - name: 'JoinCluster'
+    uri:
       url: 'http://192.168.141.206:8091/node/controller/doJoinCluster'
       method: POST
       body: 'hostname=192.168.141.203&user=Administrator&password=Minhduc7b&services=kv,index,n1ql,fts'
       body_format: json
       url_username: Administrator
       url_password: Minhduc7b
-     register: result
-
-
+    register: result
