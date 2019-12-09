@@ -1,0 +1,4 @@
+---
+hostList: "{{ lookup('file', 'serverlist.json') }}"
+hostname: "{{ ansible_hostname }}"
+interface: "{{ ansible_default_ipv4.interface }}"

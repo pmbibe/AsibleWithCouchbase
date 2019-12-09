@@ -1,0 +1,25 @@
+[{
+        "hostname": "MasterMySQL_1",
+        "customProperties": {
+                    "dc": "VT1",
+                    "rack": "VT1 Cloud",
+                    "serial": "ABCDEF1",
+                    "ip": "11.11.11.11"
+        }
+}, {
+        "hostname": "SlaveMySQL_2",
+        "customProperties": {
+                    "dc": "VT2",
+                    "rack": "VT2 Cloud",
+                    "serial": "ABCDEF2",
+                    "ip": "22.22.22.22"
+        }
+},{
+        "hostname": "SlaveMySQL_3",
+        "customProperties": {
+                    "dc": "VT3",
+                    "rack": "VT3 Cloud",
+                    "serial": "ABCDEF3",
+                    "ip": "33.33.33.33"
+        }
+}]
